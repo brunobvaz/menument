@@ -1,0 +1,19 @@
+.transition-container {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+  height: 0;
+  overflow: hidden;
+}
+
+.transition-container.show {
+  opacity: 1;
+  transform: translateY(0);
+  height: auto;
+}
+
+.saving {
+  opacity: 0.5;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}

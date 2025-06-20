@@ -1,0 +1,136 @@
+.login-bg {
+  background-color: #e0d9f1; /* Roxo claro acinzentado */
+}
+
+.object-fit-cover {
+  object-fit: cover;
+}
+
+/* Altura 80% da tela */
+.login-card {
+  height: 80vh;
+}
+
+
+/* Estilo do botão roxo */
+.btn.btn-purple {
+  background-color: #6f42c1; /* roxo Bootstrap-ish */
+  color: #fff;
+  border: none;
+}
+
+.btn.btn-purple:hover {
+  background-color: #5a32a3 ;
+  color: #fff;
+}
+
+.btn.btn-purple:focus,
+.btn.btn-purple:active,
+.btn.btn-purple:focus-visible {
+  background-color: #512b91;
+  box-shadow: 0 0 0 0.25rem rgba(111, 66, 193, 0.5); /* anel de foco roxo */
+  outline: none;
+  color: #fff;
+}
+
+.btn.btn-purple:disabled {
+  background-color: #d3c2eb;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+/* Cor de foco roxa para todos os inputs com .form-control */
+.form-control:focus {
+  border-color: #6f42c1 !important;
+  box-shadow: 0 0 0 0.2rem rgba(111, 66, 193, 0.25) !important;
+}
+
+
+/* Cor de fundo roxa para a navbar */
+.bg-purple {
+  background-color: #443464 !important;
+}
+
+/* Opcional: destacar link ativo */
+.nav-link.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Fundo da página */
+.dashboard-bg {
+  background-color: #e6e0f3; /* roxo acinzentado claro */
+  min-height: 100vh;
+}
+
+/* Caixa central com sombra e padding */
+.content-box {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* sombra suave */
+  border-radius: 12px;
+  background-color: white;
+}
+
+/* Fundo roxo acinzentado */
+.recipe-form-bg {
+  background-color: #e6e0f3;
+  min-height: 100vh;
+}
+
+/* Estilo de foco roxo para inputs */
+.form-control:focus,
+.form-select:focus,
+textarea.form-control:focus {
+  border-color: #6f42c1;
+  box-shadow: 0 0 0 0.2rem rgba(111, 66, 193, 0.25);
+  outline: none;
+}
+
+/* Botões com espaçamento consistente */
+.btn + .btn {
+  margin-left: 0.5rem;
+}
+
+/* Estilizar thumbnails */
+.img-thumbnail {
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.link-purple {
+  color: #6f42c1 !important;
+}
+
+.link-purple:hover {
+  text-decoration: underline;
+  color: #5a379d !important;
+}
+
+.transition-container {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  height: 0;
+  overflow: hidden;
+}
+
+.transition-container.show {
+  opacity: 1;
+  transform: translateY(0);
+  height: auto;
+}
+
+.image-slot {
+  width: 24%;
+  height: 200px;
+  border: 2px dashed #ccc;
+  background-color: #f8f9fa;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
