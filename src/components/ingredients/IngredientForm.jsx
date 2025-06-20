@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './ingredient.css'; // Importa o CSS com a opacidade suave
+import './ingredient.css';
 
 const getEmptyForm = () => ({
   id: Date.now(),
@@ -7,6 +7,7 @@ const getEmptyForm = () => ({
   unit: '',
   quantity: '',
   color: '#000000',
+  textColor: '#000000', // Novo campo adicionado
   type: '',
   nutritions: {
     proteins: '',
@@ -28,13 +29,14 @@ const IngredientForm = ({ ingredient, onSave, onCancel }) => {
     if (ingredient) {
       setForm({
         ...ingredient,
+        textColor: ingredient.textColor || '#000000',
         preview: ingredient.image
           ? `http://localhost:3001/uploads/${ingredient.image}`
           : null,
         imageFile: null,
       });
     } else {
-      setForm(getEmptyForm()); // Garante formulário limpo
+      setForm(getEmptyForm());
     }
   }, [ingredient]);
 
@@ -69,7 +71,6 @@ const IngredientForm = ({ ingredient, onSave, onCancel }) => {
     setIsSaving(true);
     await onSave({ ...form });
 
-    // Espera 1.5s antes de voltar à lista
     setTimeout(() => {
       setIsSaving(false);
       onCancel();
@@ -81,10 +82,8 @@ const IngredientForm = ({ ingredient, onSave, onCancel }) => {
       <h4>{ingredient ? 'Editar Ingrediente' : 'Novo Ingrediente'}</h4>
       <form onSubmit={handleSubmit}>
         <div className="row">
-          {/* 2/3 do formulário */}
           <div className="col-md-8">
             <div className="row g-3">
-              {/* Nome */}
               <div className="col-md-6">
                 <label className="form-label">Nome</label>
                 <input
@@ -94,7 +93,7 @@ const IngredientForm = ({ ingredient, onSave, onCancel }) => {
                   required
                 />
               </div>
-              {/* Unidade */}
+
               <div className="col-md-3">
                 <label className="form-label">Unidade</label>
                 <select
@@ -109,7 +108,7 @@ const IngredientForm = ({ ingredient, onSave, onCancel }) => {
                   <option value="un">Unidade (un)</option>
                 </select>
               </div>
-              {/* Quantidade */}
+
               <div className="col-md-3">
                 <label className="form-label">Quantidade</label>
                 <input
@@ -120,22 +119,30 @@ const IngredientForm = ({ ingredient, onSave, onCancel }) => {
                 />
               </div>
 
-              {/* Cor */}
+              {/* Cor, Cor de Letra e Tipo */}
               <div className="col-md-4">
                 <label className="form-label">Cor</label>
-                <div className="d-flex align-items-center">
-                  <input
-                    type="color"
-                    className="form-control form-control-color w-100"
-                    value={form.color}
-                    onChange={e => handleChange('color', e.target.value)}
-                    title="Escolher cor"
-                  />
-                </div>
+                <input
+                  type="color"
+                  className="form-control form-control-color w-100"
+                  value={form.color}
+                  onChange={e => handleChange('color', e.target.value)}
+                  title="Escolher cor"
+                />
               </div>
 
-              {/* Tipo */}
-              <div className="col-md-8">
+              <div className="col-md-4">
+                <label className="form-label">Cor de Letra</label>
+                <input
+                  type="color"
+                  className="form-control form-control-color w-100"
+                  value={form.textColor}
+                  onChange={e => handleChange('textColor', e.target.value)}
+                  title="Escolher cor da letra"
+                />
+              </div>
+
+              <div className="col-md-4">
                 <label className="form-label">Tipo</label>
                 <select
                   className="form-select"
@@ -259,4 +266,5 @@ const IngredientForm = ({ ingredient, onSave, onCancel }) => {
 };
 
 export default IngredientForm;
+
 
