@@ -3,7 +3,7 @@
 echo "🚀 Iniciando deploy do frontend..."
 
 # Caminho do projeto
-cd /home/seu-usuario/menument-frontend || exit 1
+#cd /home/seu-usuario/menument-frontend || exit 1
 
 # Atualiza com o último código do repositório
 git pull origin main || exit 1
