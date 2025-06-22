@@ -1,7 +1,8 @@
 import { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 
-const API_URL = 'http://localhost:3001/api/recipes';
+//const API_URL = 'http://localhost:3001/api/recipes';
+const API_URL = '/api/recipes';
 
 const useRecipes = () => {
   const [recipes, setRecipes] = useState([]);

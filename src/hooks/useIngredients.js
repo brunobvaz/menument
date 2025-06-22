@@ -6,7 +6,8 @@ const useIngredients = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const API_URL = 'http://localhost:3001/api/ingredients';
+  //const API_URL = 'http://localhost:3001/api/ingredients';
+  const API_URL = '/api/ingredients';
 
   // 🔄 GET
   const fetchIngredients = async () => {
