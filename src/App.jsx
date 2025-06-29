@@ -12,6 +12,7 @@ import ActivatePage from './pages/auth/ActivatePage';
 import ResendActivationPage from './pages/auth/ResendActivationPage';
 import ResetPasswordPage from './pages/auth/ResetPasswordPage';
 import ForgotPasswordPage from './pages/auth/ForgotPasswordPage';
+import AccountActivated from './pages/Activatedpage';
 
 // 📘 Receitas
 import Dashboard from './pages/Dashboard';
@@ -54,6 +55,7 @@ function AppContent() {
         <Route path="/forgot-password" element={<ForgotPasswordPage />} />
         <Route path="/reset-password/:token" element={<ResetPasswordPage />} />
 
+        <Route path="/account-activated" element={<AccountActivated />} />
 
         {/* Receitas */}
         <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
