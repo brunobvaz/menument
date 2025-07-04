@@ -22,7 +22,7 @@ const UserForm = ({ user = null, onSave, onCancel }) => {
         status: user.status || 'inactive',
         photo: null,
       });
-      setPreview(user.photo ? `http://localhost:3001/uploads/${user.photo}` : null);
+      setPreview(user.photo ? `https://menumentapp.com/uploads/${user.photo}` : null);
     } else {
       setForm(defaultUser);
       setPreview(null);

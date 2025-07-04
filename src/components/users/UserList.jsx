@@ -179,7 +179,7 @@ const UserList = ({
                   <td>
                     <div className="d-flex align-items-center gap-2">
                       <img
-                        src={user.photo ? `http://localhost:3001/uploads/${user.photo}` : '/default-avatar.png'}
+                        src={user.photo ? `https://menumentapp.com/uploads/${user.photo}` : '/default-avatar.png'}
                         alt="Avatar"
                         className="rounded-circle"
                         width={40}

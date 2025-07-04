@@ -139,7 +139,7 @@ const IngredientList = ({
                   <td>
                     {ing.image ? (
                       <img
-                        src={`http://localhost:3001/uploads/${ing.image}`}
+                        src={`https://menumentapp.com/uploads/${ing.image}`}
                         alt={ing.name}
                         className="rounded"
                         style={{ width: '40px', height: '40px', objectFit: 'cover' }}

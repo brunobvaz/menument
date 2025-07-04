@@ -1,11 +1,16 @@
 import axios from 'axios';
 
+const isLocalhost = typeof window !== 'undefined' && window.location.hostname === 'localhost';
+console.log("isLocalhost", isLocalhost)
+
 const api = axios.create({
-  baseURL: '/api', // NGINX irá redirecionar para o backend
+  baseURL: isLocalhost
+    ? 'http://localhost:3001/api' // ⬅️ Backend local em dev
+    : '/api',                     // ⬅️ Produção (NGINX faz proxy)
   headers: {
     'Content-Type': 'application/json',
   },
-  withCredentials: true, // necessário para enviar e receber cookies (sessão)
+  withCredentials: true, // importante para cookies/session
 });
 
 export default api;

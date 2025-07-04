@@ -124,7 +124,7 @@ const RecipeList = ({
                   <td>
                     {recipe.image ? (
                       <img
-                        src={`http://localhost:3001/uploads/${recipe.image}`}
+                        src={`https://menumentapp.com/uploads/${recipe.image}`}
                         alt={recipe.title}
                         className="rounded"
                         style={{ width: '60px', height: '60px', objectFit: 'cover' }}

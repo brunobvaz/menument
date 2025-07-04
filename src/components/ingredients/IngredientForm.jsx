@@ -31,7 +31,7 @@ const IngredientForm = ({ ingredient, onSave, onCancel }) => {
         ...ingredient,
         textColor: ingredient.textColor || '#000000',
         preview: ingredient.image
-          ? `http://localhost:3001/uploads/${ingredient.image}`
+          ? `https://menumentapp.com/uploads/${ingredient.image}`
           : null,
         imageFile: null,
       });

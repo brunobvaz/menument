@@ -332,7 +332,7 @@ const RecipeForm = ({ onSave, selectedRecipe, clearSelected }) => {
                 const file = imagePreviews[i];
                 const previewSrc =
                   typeof file === 'string'
-                    ? `http://localhost:3001/uploads/${file}`
+                    ? `https://menumentapp.com/uploads/${file}`
                     : file
                       ? URL.createObjectURL(file)
                       : null;
