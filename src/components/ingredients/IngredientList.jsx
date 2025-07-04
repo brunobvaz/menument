@@ -57,7 +57,7 @@ const IngredientList = ({
   return (
     <div>
       <div className="d-flex justify-content-between align-items-center mb-3">
-        <h3>Ingredientes</h3>
+        <h3>Lista de Ingredientes</h3>
         <button className="btn btn-primary" onClick={onNew}>Novo Ingrediente</button>
       </div>
 
