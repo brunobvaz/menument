@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import './ingredient.css'; // Crie esse ficheiro CSS ou copie o estilo abaixo
+// src/config.js
+import { BASE_UPLOAD_URL } from '../../config';
+
+
 
 const IngredientList = ({
   ingredients,
@@ -139,7 +143,7 @@ const IngredientList = ({
                   <td>
                     {ing.image ? (
                       <img
-                        src={`https://menumentapp.com/uploads/${ing.image}`}
+                        src={`${BASE_UPLOAD_URL}/${ing.image}`}
                         alt={ing.name}
                         className="rounded"
                         style={{ width: '40px', height: '40px', objectFit: 'cover' }}
