@@ -140,6 +140,7 @@ const toggleIngredientStatus = async (id, currentStatus) => {
     formData.append('unit', ingredient.unit);
     formData.append('quantity', ingredient.quantity);
     formData.append('color', ingredient.color);
+    formData.append('textColor', ingredient.textColor);
     formData.append('type', ingredient.type);
 
     Object.entries(ingredient.nutritions).forEach(([key, value]) => {
